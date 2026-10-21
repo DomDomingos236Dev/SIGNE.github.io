@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistema integrado de Gestão de Notas</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI, sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#0f172a,#1e3a8a);
+}
+
+.login-container{
+    width:400px;
+    background:white;
+    border-radius:20px;
+    padding:40px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.25);
+}
+
+.logo{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.logo img{
+    width:80px;
+}
+
+.logo h1{
+    font-size:24px;
+    color:#1e3a8a;
+}
+
+.logo p{
+    color:#666;
+    margin-top:5px;
+}
+
+.input-group{
+    margin-top:20px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:6px;
+    color:#333;
+    font-weight:600;
+}
+
+.input-group input{
+    width:100%;
+    padding:14px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    outline:none;
+    transition:.3s;
+}
+
+.input-group input:focus{
+    border-color:#2563eb;
+}
+
+.options{
+    display:flex;
+    justify-content:space-between;
+    margin-top:15px;
+    font-size:14px;
+}
+
+.options a{
+    text-decoration:none;
+    color:#2563eb;
+}
+
+.btn-login{
+    width:100%;
+    padding:15px;
+    margin-top:25px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn-login:hover{
+    background:#1d4ed8;
+}
+
+.footer{
+    text-align:center;
+    margin-top:20px;
+    color:#777;
+    font-size:13px;
+}
+
+  .erro-msg {
+    color: #d93025;
+    display: none;
+    
+  text-align: center;
+   font-size: 14px;
+   margin-bottom: 32px;
+  }
+</style>
+
+</head>
+<body>
+
+<div class="login-container">
+
+    <div class="logo">
+        <img src="imgs/logo.png" alt="">
+        <h1>SIGNE</h1>
+        <p>Sistema Integrado de Gestão de Notas Escolares</p>
+    </div>
+    
+        <p id="erroSenha" class="erro-msg">Usuário ou senha incorreta !</p>
+
+    <form action="menu.html" id="loginForm">
+        <div class="input-group">
+            <label>Utilizador</label>
+            <input type="text" placeholder="Digite o utilizador" id="email">
+        </div>
+
+        <div class="input-group">
+            <label>Senha</label>
+            <input type="password" placeholder="Digite a senha"id="senha">
+        </div>
+
+        <div class="options">
+            <label>
+                <input type="checkbox">
+                Lembrar-me
+            </label>
+
+            <a href="senha.html">Esqueceu a senha?</a>
+        </div>
+
+        <button class="btn-login" type="submit">
+            Entrar no Sistema
+        </button>
+    </form>
+
+    <div class="footer">
+        © 2026 Sistema de Gestão de Notas
+    </div>
+
+</div>
+
+<script>
+const senha = "1234";
+const usuario = "admin";
+
+console.log("Aqui vai estar o C++");
+console.log("Ya Jean")
+const form = document.getElementById('loginForm');
+const senhaInput = document.getElementById('senha');
+const emailInput = document.getElementById('email');
+const erroSenha = document.getElementById('erroSenha');
+const loginScreen = document.getElementById('loginScreen');
+const seccao2 = document.getElementById('seccao2');
+
+form.addEventListener('submit', function(e) {
+e.preventDefault(); // impede recarregar a página
+
+const senhaDigitada = senhaInput.value;
+
+const usuarioDigitado = emailInput.value;
+
+
+
+
+// Validação da senha
+if (senhaDigitada === senha & usuarioDigitado === usuario) {
+erroSenha.style.display = 'none';
+senhaInput.classList.remove('erro');
+window.location.href = 'menu.html';
+
+} else {
+// Senha incorreta
+erroSenha.style.display = 'block';
+senhaInput.classList.add('erro');
+senhaInput.value = '';
+//emailInput.value = '';
+}
+});
+
+function toggleSenha() {
+const input = document.getElementById('senha');
+input.type = input.type === 'password' ? 'text' : 'password';
+}
+
+
+
+// Remove erro quando digitar de novo
+senhaInput.addEventListener('input', function() {
+senhaInput.classList.remove('erro');
+erroSenha.style.display = 'none';
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGNE - Sistema de Gestão de Notas</title>
+    <style>
+      *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+}
+
+
+
+/* MENU LATERAL */
+
+.sidebar{
+    width:250px;
+    background:#1e293b;
+    color:white;
+    padding:25px;
+}
+
+.sidebar h2{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar ul li{
+    margin:15px 0;
+}
+
+.sidebar ul li a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:12px;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.sidebar ul li a:hover{
+    background:#334155;
+}
+
+
+.container{
+    display: flex;
+    height: 100vh;
+}
+
+/* CONTEÚDO */
+
+header{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+header h1{
+    color:#1e293b;
+}
+
+.logo {
+     border:2px solid #fff; ;
+    border-radius:50%;
+    width:100px;
+    height:100px;
+    background-image:url("../imgs/fundo.jpg");
+    background-size:cover;
+    background-position:center;
+    margin-left:80px;
+    
+    
+}
+
+.caixa{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 4 colunas iguais */
+  gap: 10px;
+
+}
+
+@media (max-width: 768px) {
+    .caixa {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+.cards{
+    position:relative;
+    color:#fff;
+    width:300px;
+    height:280px;
+    padding:10px;
+    border:1px solid transparent;
+    border-radius:20px;
+    background:#fff;
+    margin:40px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+}
+.cards p{
+    color:#000;
+}
+
+button{
+    width:120px;
+    padding:10px;
+    border-radius:8px;
+    border:none;
+    margin-top:30px;
+    color:#fff;
+    
+}
+
+.btn1{
+    background-image:linear-gradient(to right, #42A6F4, #0B82E0);
+    margin-right:20px;
+}
+
+.btn2{
+    background-image:linear-gradient(to right, #54F38F, #0CDF5A);
+}
+    </style>
+</head>
+<body>
+    <header>
+            <h1>Sistema Integrado de Gestão de Notas Escolares</h1>
+        </header>
+<div class="container">
+
+    <aside class="sidebar">
+        <h2>SIGNE</h2>
+
+        <ul>
+            <li><a href="menu.html">Dashboard</a></li>
+            <li><a href="Notas.html">Alunos</a></li>
+            <li><a href="Notas.html">Notas</a></li>
+            <li><a href="definicoes.html">Configurações</a></li>
+        </ul>
+    </aside>
+    
+    
+    <div class="caixa">
+        <div class="cards">
+     <div class="aluno">
+ <div class="logo" style="background-image:url('imgs/Dom.jpg')";></div>
+                <p>Dom Domingos</p>
+    <p style="color:#ccc">12 classe <br>Informática<br>001</p>
+                
+                <button class="btn1">Perfil</button>
+                
+                <a href="DomPauta.html">
+                <button class="btn2"> Notas </button>
+                </a>
+            
+        </div>
+    </div>
+    
+         <div class="cards">
+         <div class="aluno">
+ <div class="logo" style="background-image:url('imgs/mari.jpg')";></div>
+             <p>Mariquiela de Carvalho</p>
+             <p style="color:#ccc">12 classe <br>Informática<br>002</p>
+             
+             <button class="btn1">Perfil</button>
+             
+             <a href="MariPauta.html">
+             <button class="btn2"> Notas </button>
+             </a>
+             
+         </div>
+     </div>
+     
+          <div class="cards">
+         <div class="aluno">
+ <div class="logo" style="background-image:url('imgs/efra.jpg')";></div>
+             <p>Efraim Capitão</p>
+             <p style="color:#ccc">12 classe <br>Informática<br>003</p>
+             
+             <button class="btn1">Perfil</button>
+             
+             <a href="Efra.html">
+             <button class="btn2"> Notas </button>
+             </a>
+         </div>
+     </div>
+     
+          <div class="cards">
+         <div class="aluno">
+ <div class="logo" style="background-image:url('imgs/lucas.jpg')";></div>
+             <p>Lukebi Simão</p>
+             <p style="color:#ccc">12 classe <br>Informática<br>004</p>
+             
+             <button class="btn1">Perfil</button>
+             
+             <a href="alunoX.html">
+             <button class="btn2"> Notas </button>
+             </a>
+             
+         </div>
+     </div>
+     
+          <div class="cards">
+         <div class="aluno">
+ <div class="logo" style="background-image:url('imgs/fresh.jpg')";></div>
+             <p>João Cassinda</p>
+             <p style="color:#ccc">12 classe <br>Informática<br>005</p>
+             
+             <button class="btn1">Perfil</button>
+             
+             <a href="alunoX.html">
+             <button class="btn2"> Notas </button>
+             </a>
+             
+         </div>
+     </div>
+     
+          <div class="cards">
+         <div class="aluno">
+    <div class="logo" style="background-image:url('imgs/julio.jpg')";></div>
+             <p>Júlio Coxe</p>
+             <p style="color:#ccc">12 classe <br>Informática<br>006</p>
+             
+             <button class="btn1">Perfil</button>
+             
+             <a href="alunoX.html">
+             <button class="btn2"> Notas </button>
+             </a>
+             
+         </div>
+     </div>
+     
+          <div class="cards">
+         <div class="aluno">
+ <div class="logo" style="background-image:url('imgs/augusto.jpg')";></div>
+             <p>Raimundo Augusto</p>
+             <p style="color:#ccc">12 classe <br>Informática<br>007</p>
+             
+             <button class="btn1">Perfil</button>
+             
+             <a href="alunoX.html">
+             <button class="btn2"> Notas </button>
+             </a>
+             
+         </div>
+     </div>
+     
+          <div class="cards">
+         <div class="aluno">
+ <div class="logo" style="background-image:url('imgs/geraldo.jpg')";></div>
+             <p>Geraldo Mateus</p>
+             <p style="color:#ccc">12 classe <br>Informática<br>008</p>
+             
+             <button class="btn1">Perfil</button>
+             
+             <a href="alunoX.html">
+             <button class="btn2"> Notas </button>
+             </a>
+             
+         </div>
+     </div>
+     
+         <div class="cards">
+         <div class="aluno">
+    <div class="logo" style="background-image:url('imgs/logo.png')";></div>
+             <p>Lutonadio Manuel</p>
+             <p style="color:#ccc">12 classe <br>Informática<br>009</p>
+             
+             <button class="btn1">Perfil</button>
+             
+             <a href="alunoX.html">
+             <button class="btn2"> Notas </button>
+             </a>
+             
+         </div>
+     </div>
+     
+     <div class="cards">
+    <div class="aluno">
+        <div class="logo" style="background-image:url('imgs//diasilua.jpg')" ;></div>
+        <p>Diasilua Lutadil</p>
+        <p style="color:#ccc">12 classe <br>Informática<br>010</p>
+        
+        <button class="btn1">Perfil</button>
+        
+        <a href="alunoX.html">
+            <button class="btn2"> Notas </button>
+        </a>
+        
+    </div>
+    </div>
+    </div>
+
+
+
+</body>
+</html>

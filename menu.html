@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGNE - Sistema de Gestão de Notas</title>
+    <style>
+      *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+}
+
+.container{
+    display:flex;
+    min-height:100vh;
+}
+
+/* MENU LATERAL */
+
+.sidebar{
+    width:250px;
+    background:#1e293b;
+    color:white;
+    padding:25px;
+}
+
+.sidebar h2{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar ul li{
+    margin:15px 0;
+}
+
+.sidebar ul li a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:12px;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.sidebar ul li a:hover{
+    background:#334155;
+}
+
+/* CONTEÚDO */
+
+.content{
+    flex:1;
+    padding:25px;
+}
+
+header{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+header h1{
+    color:#1e293b;
+}
+
+/* CARDS */
+
+.cards{
+    margin-top:25px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    padding:25px;
+    border-radius:15px;
+    color:white;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.card h3{
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.card p{
+    font-size:35px;
+    font-weight:bold;
+}
+
+.total{
+    background:linear-gradient(135deg,#2563eb,#1d4ed8);
+}
+
+.aprovado{
+    background:linear-gradient(135deg,#16a34a,#15803d);
+}
+
+.reprovado{
+    background:linear-gradient(135deg,#dc2626,#b91c1c);
+}
+
+.media{
+    background:linear-gradient(135deg,#9333ea,#7e22ce);
+}
+
+/* BOAS VINDAS */
+
+.welcome{
+    margin-top:30px;
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+.welcome h2{
+    margin-bottom:10px;
+    color:#1e293b;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+    .container{
+        flex-direction:column;
+    }
+
+    .sidebar{
+        width:100%;
+    }
+
+}
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <aside class="sidebar">
+        <h2>SIGNE</h2>
+
+        <ul>
+            <li><a href="menu.html">Dashboard</a></li>
+            <li><a href="Notas.html">Alunos</a></li>
+            <li><a href="Notas.html">Notas</a></li>
+            <li><a href="definicoes.html">Configurações</a></li>
+        </ul>
+    </aside>
+
+    <main class="content">
+
+        <header>
+            <h1>Sistema Integrado de Gestão de Notas Escolares</h1>
+        </header>
+
+        <section class="cards">
+
+            <div class="card total">
+                <h3>Total de Alunos</h3>
+                <p>850</p>
+            </div>
+
+            <div class="card aprovado">
+                <h3>Aprovados</h3>
+                <p>720</p>
+            </div>
+
+            <div class="card reprovado">
+                <h3>Reprovados</h3>
+                <p>130</p>
+            </div>
+
+            <div class="card media">
+                <h3>Média Geral</h3>
+                <p>13.8</p>
+            </div>
+
+        </section>
+
+        <section class="welcome">
+            <h2>Bem-vindo ao Painel Administrativo</h2>
+            <p>
+                Gerencie alunos, notas 
+                através deste sistema moderno e eficiente.
+            </p>
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>

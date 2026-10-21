@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Definições do Administrador</title>
+<style>
+  *{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:#f1f5f9;
+padding:30px;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+}
+
+.header{
+margin-bottom:30px;
+}
+
+.header h1{
+color:#0f172a;
+margin-bottom:10px;
+}
+
+.header p{
+color:#64748b;
+}
+
+.perfil-card{
+background:white;
+border-radius:20px;
+padding:30px;
+display:flex;
+gap:40px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+margin-bottom:30px;
+}
+
+.foto-area{
+text-align:center;
+min-width:250px;
+}
+
+.foto-area img{
+width:180px;
+height:180px;
+border-radius:50%;
+object-fit:cover;
+border:2px solid #2563eb;
+}
+
+.btn-foto{
+margin-top:15px;
+background:#2563eb;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:10px;
+cursor:pointer;
+}
+
+.dados{
+flex:1;
+}
+
+.campo{
+margin-bottom:18px;
+}
+
+.campo label{
+display:block;
+margin-bottom:8px;
+font-weight:600;
+color:#334155;
+}
+
+.campo input{
+width:100%;
+padding:14px;
+border:1px solid #cbd5e1;
+border-radius:10px;
+outline:none;
+}
+
+.campo input:focus{
+border-color:#2563eb;
+}
+
+.acoes{
+display:flex;
+gap:15px;
+margin-top:20px;
+}
+
+.salvar{
+background:#16a34a;
+color:white;
+border:none;
+padding:14px 25px;
+border-radius:10px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.cancelar{
+background:#ef4444;
+color:white;
+border:none;
+padding:14px 25px;
+border-radius:10px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.seguranca{
+background:white;
+padding:25px;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.seguranca h2{
+margin-bottom:20px;
+color:#0f172a;
+}
+
+.opcao{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 0;
+border-bottom:1px solid #e2e8f0;
+}
+
+.switch{
+position:relative;
+display:inline-block;
+width:60px;
+height:30px;
+}
+
+.switch input{
+display:none;
+}
+
+.slider{
+position:absolute;
+cursor:pointer;
+top:0;
+left:0;
+right:0;
+bottom:0;
+background:#cbd5e1;
+border-radius:30px;
+transition:.4s;
+}
+
+.slider:before{
+content:"";
+position:absolute;
+height:22px;
+width:22px;
+left:4px;
+bottom:4px;
+background:white;
+border-radius:50%;
+transition:.4s;
+}
+
+input:checked + .slider{
+background:#2563eb;
+}
+
+input:checked + .slider:before{
+transform:translateX(30px);
+}
+
+@media(max-width:900px){
+
+.perfil-card{
+flex-direction:column;
+align-items:center;
+}
+
+.foto-area{
+width:100%;
+}
+
+.acoes{
+flex-direction:column;
+}
+
+.salvar,
+.cancelar{
+width:100%;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>⚙️ Definições do Sistema</h1>
+        <p>Gerencie as informações da sua conta administrativa</p>
+    </div>
+
+    <div class="perfil-card" id="conteudo">
+
+        <div class="foto-area">
+            <img src="imgs/adm.png">
+            <button class="btn-foto">Alterar Foto</button>
+        </div>
+
+        <div class="dados">
+
+            <div class="campo">
+                <label>Nome do Administrador</label>
+                <input type="text" value="Dom Domingos">
+            </div>
+
+            <div class="campo">
+                <label>Nome de Utilizador</label>
+                <input type="text" value="admin">
+            </div>
+
+
+            <div class="campo">
+                <label>Palavra-passe Atual</label>
+                <input type="password" value="123456">
+            </div>
+
+            <div class="campo">
+                <label>Nova Palavra-passe</label>
+                <input type="password" placeholder="Digite a nova palavra-passe">
+            </div>
+
+            <div class="campo">
+                <label>Confirmar Palavra-passe</label>
+                <input type="password" placeholder="Confirme a nova palavra-passe">
+            </div>
+
+            <div class="acoes">
+                <button class="salvar">Guardar Alterações</button>
+                <button class="cancelar">Cancelar</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="seguranca">
+
+        <h2>Segurança da Conta</h2>
+
+        <div class="opcao">
+            <span>Autenticação em Dois Fatores</span>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <div class="opcao">
+            <span>Receber Alertas de Login</span>
+            <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <div class="opcao">
+            <span>Modo Escuro</span>
+            <label class="switch">
+                <input type="checkbox" id="tema">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    
+    const fundo = document.getElementById('tema');
+    const conte = document.getElementById('conteudo')
+    
+fundo.addEventListener("click", function() {
+    conte.style.backgroundColor = "#000";
+    document.body.style.background ="#000";
+});
+    
+</script>
+</body>
+</html>
